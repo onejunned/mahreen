@@ -155,7 +155,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+	Collective\Html\HtmlServiceProvider::class,
+    	Zizaco\Entrust\EntrustServiceProvider::class,
+	\Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class    
     ],
 
     /*
@@ -201,7 +203,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+	'Form' => Collective\Html\FormFacade::class,
+      	'Html' => Collective\Html\HtmlFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+	'Cart'            => \Gloudemans\Shoppingcart\Facades\Cart::class,
     ],
 
 ];
